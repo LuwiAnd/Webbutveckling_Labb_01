@@ -1,0 +1,28 @@
+
+
+header, .breadcrumb{
+    background-color: #003D2C;
+    color: #FFFFFF;
+}
+
+.breadcrumb-item, .breadcrumb-item a{
+    color: #FFFFFF;
+}
+
+.breadcrumb-item::before {
+    color: white !important; /* Gör "/" vit */
+}
+
+nav {
+    background-color: #005A41;
+}
+
+footer{
+    background-color: #573A00;
+    padding: 30px;
+}
+
+article{
+    background-color: #FFFFFF;
+}
+

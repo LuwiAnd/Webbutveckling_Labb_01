@@ -1,0 +1,78 @@
+/* #BE7C4D
+190, 124, 77  */
+
+
+/* Bra färgpalette. 
+#CA895F
+202, 137, 95
+
+#4B5043
+75, 80, 67
+
+#AFE0CE
+175, 224, 206
+
+#7776BC
+119, 118, 188
+
+#AFB3F7
+175, 179, 247
+
+#B6BAF8
+182, 186, 248
+ */
+
+
+
+ /* Annan färgpalette.
+
+https://paletton.com/#uid=623170kHwcnEraTGfbJGXeOGqhd
+
+*/
+
+
+
+
+header, .breadcrumb{
+    background-color: #003D2C;
+    color: #FFFFFF;
+}
+
+.breadcrumb-item, .breadcrumb-item a{
+    color: #FFFFFF;
+}
+
+.breadcrumb-item::before {
+    color: white !important; /* Gör "/" vit */
+}
+
+nav {
+    background-color: #005A41;
+}
+
+footer{
+    background-color: #573A00;
+    padding: 30px;
+}
+
+article{
+    background-color: #FFFFFF;
+}
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 80px 50px auto 50px;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "aside section"
+        "footer footer";
+    height: 100vh;
+}
+
+*/
