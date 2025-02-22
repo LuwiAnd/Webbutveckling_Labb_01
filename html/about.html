@@ -38,7 +38,7 @@
                         <a href="about.html" class="nav-link">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">BOOKS</a>
+                        <a href="products.html" class="nav-link">Products</a>
                     </li>
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">BOARDS</a>
@@ -63,14 +63,52 @@
     <!-- Showcase -->
     <section class="bg-light text-dark p-5 text-center text-sm-start">
         <div class="container">
-            <div class="d-sm-flex align-items-center justify-content-between">
-                <div class="col-md-5">
+            <div class="d-sm-flex align-items-center justify-content-between flex-column flex-md-row">
+                <div class="col-md-5 mb-4 mb-md-0">
                     <h1>About Us!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique eligendi. Earum porro praesentium at? Fugiat amet sunt ullam officiis laudantium obcaecati tenetur in, a asperiores ipsum nihil magni tempore.</p>
                     <button class="btn btn-primary btn-lg" alt="Click this button to view our products">Our products</button>
                 </div>
                 <div class="col-md-7">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2134.7657037989484!2d11.910400141815794!3d57.652469673955004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff248003e93b7%3A0xdb4288c864984cc6!2sFr%C3%B6lunda%20Torg!5e0!3m2!1ssv!2sse!4v1739730177102!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-container" style="position: relative; width: 100%; height: 0; padding-bottom: 75%; overflow: hidden;">
+                        <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2134.7657037989484!2d11.910400141815794!3d57.652469673955004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff248003e93b7%3A0xdb4288c864984cc6!2sFr%C3%B6lunda%20Torg!5e0!3m2!1ssv!2sse!4v1739730177102!5m2!1ssv!2sse" 
+                          width="600" 
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="true" 
+                          loading="lazy" 
+                          referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Öppet API -->
+    <section class="bg-dark text-light p-5 text-center text-md-start">
+        <div class="container">
+            <div class="d-md-flex align-items-center justify-content-between flex-column flex-md-row">
+                <div class="col-md-5 mb-4 mb-md-0 text-center text-md-start">
+                    <h1>Fun with LuwiChess</h1>
+                    <p>Here at LuwiChess we like a good joke!</p>
+                    <button id="buttonGetJoke" class="btn btn-primary btn-lg" alt="Click this button to get a new joke!">Get a joke!</button>
+                </div>
+                <!-- <div class="align-items-center text-center text-md-start" style="padding: 0px 0px 0px 20px;"> -->
+                <div class="align-items-center text-center text-md-start ps-md-3">
+                        <h1>The following is a joke</h1>
+                        <p>Disclaimer: This joke is written by an independent joker. Opinions and views expressed by the joke is the jokers own and are not necessarily shared by LuwiChess and its affiliates.</p>
+                        <div class="d-flex justify-content-center justify-content-md-start">
+                            <!-- <div class="d-block" style="position: relative; width: 90%; height: 0; padding-bottom: 50%; overflow: hidden;"> -->
+                            <!-- <div class="mx-auto mx-md-0" style="width: 90%; max-width: 500px;"> -->
+                            <div style="width: 90%; max-width: 500px; position: relative; height: 0; padding-bottom: 25%;">
+                                <!-- <div id="jokeBox" > -->
+                                <div id="jokeBox" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                                    <p id="pJoke">Test</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -93,6 +131,39 @@
     <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quibusdam, laborum tempore voluptatem expedita blanditiis corporis non cupiditate magnam aliquam nobis iste dignissimos quos veniam natus tempora cumque, quod quidem.</section> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+
+        let GetJokeFunction = async function(){
+            try{
+                let response = await fetch("https://official-joke-api.appspot.com/random_joke");
+                let joke = await response.json();
+                document.getElementById('pJoke').innerHTML = `<strong>${joke.setup}</strong><br>${joke.punchline}`
+            }catch(error)
+            {
+                console.error("Error fetching joke:", error);
+                document.getElementById('pJoke').innerHTML = `Oops! Something went wrong:<br>${error}`;
+            }
+        }
+
+        GetJokeFunction();
+
+        /*
+        document.getElementById('buttonGetJoke').addEventListener('click', async function(){
+            try{
+                let response = await fetch("https://official-joke-api.appspot.com/random_joke");
+                let joke = await response.json();
+                document.getElementById('pJoke').innerHTML = `<strong>${joke.setup}</strong><br>${joke.punchline}`
+            }catch(error)
+            {
+                console.error("Error fetching joke:", error);
+                document.getElementById('pJoke').innerHTML = `Oops! Something went wrong:<br>${error}`;
+            }
+        });
+        */
+
+        document.getElementById('buttonGetJoke').addEventListener('click', GetJokeFunction);
+    </script>
+
 
 </body>
 </html>

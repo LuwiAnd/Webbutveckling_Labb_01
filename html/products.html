@@ -7,7 +7,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+    <link rel="stylesheet" href="../css/products.css">
     <title>Luwi chess</title>
 </head>
 <body>
@@ -33,48 +34,322 @@
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">HOME</a>
                     </li>
-
                     <li class="nav-item">
                         <a href="about.html" class="nav-link">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">BOOKS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">BOARDS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">CONTACT</a>
+                        <a href="products.html" class="nav-link">PRODUCTS</a>
                     </li>
                 </ul>
             </div>
+
+            <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
+                <img src="../images/shoppingcart.jpg" style="height: 100px;" alt="Shopping cart icon">
+            </a>
         </div>
     </nav>
 
     <!-- Bread crumbs -->
-    <!-- <header>LuwiChess</header> -->
     <nav class="breadcrumb py-1 px-3 mb-0">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
-            <li class="breadcrumb-item"><a href="#">ABOUT</a></li>
+            <li class="breadcrumb-item"><a href="#">PRODUCTS</a></li>
         </ol>
     </nav>
 
-    <!-- Showcase -->
+    <!-- Showcase Chesscolate -->
     <section class="bg-light text-dark p-5 text-center text-sm-start">
         <div class="container">
-            <div class="d-sm-flex align-items-center justify-content-between">
-                <div class="col-md-5">
-                    <h1>About Us!</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, similique eligendi. Earum porro praesentium at? Fugiat amet sunt ullam officiis laudantium obcaecati tenetur in, a asperiores ipsum nihil magni tempore.</p>
-                    <button class="btn btn-primary btn-lg" alt="Click this button to view our products">Our products</button>
+            <!-- <div class="d-sm-flex align-items-center justify-content-between"> -->
+            <div class="d-sm-flex align-items-start justify-content-between">
+                <div class="col-md-3">
+                    <img src="../images/chesscolate.jpg" alt="Box of Chesscolate - chocolates with chess theme." style="height: 300px; margin-bottom: 15px;"/>
+                    <table>
+                        <tr>
+                            <!-- <td class="price-cell" style="vertical-align: middle; height: 100%; display: flex; align-items: center;"> -->
+                            <td class="price-cell" style="padding-top: 10px;">
+                                <p class="price">
+                                    $9.00
+                                </p>
+                            </td>
+                            <td style="padding-left: 60px;">
+                                <button id="buttonAddChesscolateToCart" class="btn btn-primary btn-lg  buy-button" alt="Click this button to add Chesscolate to cart">Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="col-md-7">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2134.7657037989484!2d11.910400141815794!3d57.652469673955004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff248003e93b7%3A0xdb4288c864984cc6!2sFr%C3%B6lunda%20Torg!5e0!3m2!1ssv!2sse!4v1739730177102!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-md-9">
+                    <h1>Chessolate</h1>
+                    <h2>User experience</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.</p>
+                    <ul>
+                        <li>Smarter</li>
+                        <li>More Friends</li>
+                        <li>Delicious</li>
+                        <li>No Carbon Footprint</li>
+                    </ul>
+                    <p><a href="#" id="linkChesscolateReadMore" class="text-primary">Read more...</a></p>
+                    
+
+                    <!-- Hidden content that will be shown when "Read more" is clicked -->
+                    <div id="hiddenChesscolateContent" style="display: none;">
+                        <h3>Product description</h3>
+                        <p>Chessolate is our premium chess-themed chocolate assortment, crafted for chess enthusiasts with a sweet tooth. Each handmade chocolate piece is shaped like different chess pieces - knights, pawns, bishops, rooks, queens, and kings - and filled with unique flavors including dark chocolate ganache, white chocolate with raspberry, milk chocolate praline, and coffee-infused caramel.</p>
+                        <p>The box itself resembles a chessboard, with 32 individual chocolates arranged in their starting positions. Perfect as a gift for chess players or as a sophisticated treat to enjoy during your next chess match!</p>
+                        
+                        <h3>Technical details</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Measurements</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>4.5 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Width</td>
+                                    <td>25 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>25 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>450 g</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hard drive</td>
+                                    <td>Cocoa solids 70%</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>16 unique flavor combinations</td>
+                                </tr>
+                                <tr>
+                                    <td>Processor speed</td>
+                                    <td>Melts at 37°C body temperature</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p><a href="#" id="linkChesscolateReadLess" class="text-primary">Read less</a></p>
+                    </div>
+                    <!-- End of hidden Chesscolate content -->
+
                 </div>
             </div>
         </div>
     </section>
+    <hr>
+
+
+    <!-- Showcase chessglases -->
+    <section class="bg-light text-dark p-5 text-center text-sm-start">
+        <div class="container">
+            <!-- <div class="d-sm-flex align-items-center justify-content-between"> -->
+            <div class="d-sm-flex align-items-start justify-content-between">
+                <div class="col-md-3">
+                    <img src="../images/chessglasses.jpg" alt="Chess glases - sunglasses with chess theme." style="height: 300px; margin-bottom: 15px;"/>
+                    <table>
+                        <tr>
+                            <!-- <td class="price-cell" style="vertical-align: middle; height: 100%; display: flex; align-items: center;"> -->
+                            <td class="price-cell" style="padding-top: 10px;">
+                                <p class="price">
+                                    $2.00
+                                </p>
+                            </td>
+                            <td style="padding-left: 60px;">
+                                <button id="buttonAddChessGlassesToCart" class="btn btn-primary btn-lg buy-button" alt="Click this button to add Chess glasses to cart">Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-9">
+                    <h1>Chessglases</h1>
+                    <h2>User experience</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.</p>
+                    <ul>
+                        <li>Don't think while playing chess</li>
+                        <li>More Enemies</li>
+                        <li>Look smart while being dumb</li>
+                        <li>64 core processor</li>
+                    </ul>
+                    <p><a href="#" id="linkChessGlassesReadMore" class="text-primary">Read more...</a></p>
+                    
+
+                    <!-- Hidden content that will be shown when "Read more" is clicked -->
+                    <div id="hiddenChessGlassesContent" style="display: none;">
+                        <h3>Product description</h3>
+                        <p>Chessolate is our premium chess-themed chocolate assortment, crafted for chess enthusiasts with a sweet tooth. Each handmade chocolate piece is shaped like different chess pieces - knights, pawns, bishops, rooks, queens, and kings - and filled with unique flavors including dark chocolate ganache, white chocolate with raspberry, milk chocolate praline, and coffee-infused caramel.</p>
+                        <p>The box itself resembles a chessboard, with 32 individual chocolates arranged in their starting positions. Perfect as a gift for chess players or as a sophisticated treat to enjoy during your next chess match!</p>
+                        
+                        <h3>Technical details</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Measurements</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>4.5 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Width</td>
+                                    <td>25 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>25 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>450 g</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hard drive</td>
+                                    <td>64 TB</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>16 billion chess combinations</td>
+                                </tr>
+                                <tr>
+                                    <td>Processor speed</td>
+                                    <td>5 000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p><a href="#" id="linkChessGlassesReadLess" class="text-primary">Read less</a></p>
+                    </div>
+                    <!-- End of hidden Chesscolate content -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+
+
+    <!-- Showcase -->
+    <section class="bg-light text-dark p-5 text-center text-sm-start">
+        <div class="container">
+            <!-- <div class="d-sm-flex align-items-center justify-content-between"> -->
+            <div class="d-sm-flex align-items-start justify-content-between">
+                <div class="col-md-3">
+                    <img src="../images/chessglasses2.jpg" alt="sunglasses for nerds - includes nerdy case." style="height: 300px; margin-bottom: 15px;"/>
+                    <table>
+                        <tr>
+                            <!-- <td class="price-cell" style="vertical-align: middle; height: 100%; display: flex; align-items: center;"> -->
+                            <td class="price-cell" style="padding-top: 10px;">
+                                <p class="price">
+                                    $5.00
+                                </p>
+                            </td>
+                            <td style="padding-left: 60px;">
+                                <button  id="buttonAddNerdGlassesToCart" class="btn btn-primary btn-lg buy-button" alt="Click this button to add Nerdy Sunglasses to cart">Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-9">
+                    <h1>Nerdy sunglasses</h1>
+                    <h2>User experience</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.</p>
+                    <ul>
+                        <li>Look even Smarter</li>
+                        <li>Get Less Friends</li>
+                        <li>Intimidate opponents</li>
+                        <li>No Carbon Footprint</li>
+                    </ul>
+                    <p><a href="#" id="linkNerdGlassesReadMore" class="text-primary">Read more...</a></p>
+                    
+
+                    <!-- Hidden content that will be shown when "Read more" is clicked -->
+                    <div id="hiddenNerdGlassesContent" style="display: none;">
+                        <h3>Product description</h3>
+                        <p>Chessolate is our premium chess-themed chocolate assortment, crafted for chess enthusiasts with a sweet tooth. Each handmade chocolate piece is shaped like different chess pieces - knights, pawns, bishops, rooks, queens, and kings - and filled with unique flavors including dark chocolate ganache, white chocolate with raspberry, milk chocolate praline, and coffee-infused caramel.</p>
+                        <p>The box itself resembles a chessboard, with 32 individual chocolates arranged in their starting positions. Perfect as a gift for chess players or as a sophisticated treat to enjoy during your next chess match!</p>
+                        
+                        <h3>Technical details</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Measurements</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>4.5 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Width</td>
+                                    <td>25 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>25 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>450 g</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hard drive</td>
+                                    <td>Cocoa solids 70%</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>16 unique flavor combinations</td>
+                                </tr>
+                                <tr>
+                                    <td>Processor speed</td>
+                                    <td>Melts at 37°C body temperature</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p><a href="#" id="linkNerdGlassesReadLess" class="text-primary">Read less</a></p>
+                    </div>
+                    <!-- End of hidden Chesscolate content -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+
+
 
     <footer class="text-sm-start text-light text-bold">
         <p><strong>Öppettider:</strong></p>
@@ -89,9 +364,161 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsa nam modi quidem quae ad.</p>
     </footer>
 
+
+    <div 
+      id="sidebar" 
+      class="offcanvas offcanvas-end w-50"
+      tabindex="-1"
+      area-labelledby="sibar-label"
+    >
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebar-label">Shopping cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div id="shoppingcart" class="offcanvas-body">
+            <div>
+
+                <div class="container" id="cartItemChesscolate">
+                    <div class="d-md-flex align-items-center">
+                        <div class="col-md-2">
+                            <img src="../images/chesscolate.jpg" height="100px">
+                        </div>
+                        <div class="col-md-7">
+                            Chesscolate - chocolate with a chess theme.
+                        </div>
+                        <!-- <div class="col-md-5 align-items-center justify-content-end" style="font-size: 20px;"> -->
+                            <div class="col-md-3 align-items-center justify-content-end">
+                                <table style="border: solid 1px black; text-align: center;">
+                                    <tr>
+                                        <td style="width: 30px;"><button id="buttonDecreaseChesscolate" type="button" class="bi-dash" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
+                                        <td style="width: 75px;"><span id="chesscolateNumber" style="font-size: 30px;">5</span></td>
+                                        <td style="width: 30px;"><button id="buttonIncreaseChesscolate" type="button" class="bi-plus" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
+                                        <td style="width: 30px;"><button  id="buttonRemoveChesscolate"type="button" class="bi-trash" aria-label="Remove these item(s)" style="margin: 5px 0px 0px 10px;"></button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="container" id="cartItemChessGlasses">
+                    <div class="d-md-flex align-items-center">
+                        <div class="col-md-2">
+                            <img src="../images/chessglasses.jpg" height="100px">
+                        </div>
+                        <div class="col-md-7">
+                            Chess glasses - cool sunglasses with chess theme.
+                        </div>
+                        <!-- <div class="col-md-5 align-items-center justify-content-end" style="font-size: 20px;"> -->
+                            <div class="col-md-3 align-items-center justify-content-end">
+                                <table style="border: solid 1px black; text-align: center;">
+                                    <tr>
+                                        <td style="width: 30px;"><button id="buttonDecreaseChessGlasses" type="button" class="bi-dash" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
+                                        <td style="width: 75px;"><span id="chessGlassesNumber" style="font-size: 30px;">5</span></td>
+                                        <td style="width: 30px;"><button id="buttonIncreaseChessGlasses" type="button" class="bi-plus" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
+                                        <td style="width: 30px;"><button  id="buttonRemoveChessGlasses"type="button" class="bi-trash" aria-label="Remove these item(s)" style="margin: 5px 0px 0px 10px;"></button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="container" id="cartItemNerdGlasses">
+                    <div class="d-md-flex align-items-center">
+                        <div class="col-md-2">
+                            <img src="../images/chessglasses2.jpg" height="100px">
+                        </div>
+                        <div class="col-md-7">
+                            Nerd glasses - Nerdy sunglasses with chess theme and practical box.
+                        </div>
+                        <!-- <div class="col-md-5 align-items-center justify-content-end" style="font-size: 20px;"> -->
+                            <div class="col-md-3 align-items-center justify-content-end">
+                                <table style="border: solid 1px black; text-align: center;">
+                                    <tr>
+                                        <td style="width: 30px;"><button id="buttonDecreaseNerdGlasses" type="button" class="bi-dash" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
+                                        <td style="width: 75px;"><span id="nerdGlassesNumber" style="font-size: 30px;">5</span></td>
+                                        <td style="width: 30px;"><button id="buttonIncreaseNerdGlasses" type="button" class="bi-plus" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
+                                        <td style="width: 30px;"><button  id="buttonRemoveNerdGlasses"type="button" class="bi-trash" aria-label="Remove these item(s)" style="margin: 5px 0px 0px 10px;"></button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+                <hr>
+
+
+            </div>
+            <div style="text-align: right; margin-right: 20px;">
+                <p id="totalAmount" style="font-family: 'Arial Narrow Bold', sans-serif; font-size: xx-large; font-weight: bold;">Total: $999.99</p>
+                <!-- <button class="btn btn-primary btn-lg buy-button" style="background-color: #003D2C;" alt="Button to confirm purchase">Confirm purchase</button> -->
+                <button class="btn btn-primary btn-lg buy-button" style="width: 220px;" alt="Button to confirm purchase">Confirm purchase</button>
+            </div>
+        </div>
+    </div>
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <script>
+        // This script controls the "Read more" and "Read less" links that allows the user to show more or less information about each product.
+        document.addEventListener('DOMContentLoaded', function() {
+            const linkChesscolateReadMore = document.getElementById('linkChesscolateReadMore');
+            const linkChesscolateReadLess = document.getElementById('linkChesscolateReadLess');
+            const hiddenChesscolateContent = document.getElementById('hiddenChesscolateContent');
+
+            const linkChessGlassesReadMore = document.getElementById('linkChessGlassesReadMore');
+            const linkChessGlassesReadLess = document.getElementById('linkChessGlassesReadLess');
+            const hiddenChessGlassesContent = document.getElementById('hiddenChessGlassesContent');
+            
+            const linkNerdGlassesReadMore = document.getElementById('linkNerdGlassesReadMore');
+            const linkNerdGlassesReadLess = document.getElementById('linkNerdGlassesReadLess');
+            const hiddenNerdGlassesContent = document.getElementById('hiddenNerdGlassesContent');
+            
+            linkChesscolateReadMore.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChesscolateContent.style.display = 'block';
+                linkChesscolateReadMore.style.display = 'none';
+            });
+            
+            linkChesscolateReadLess.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChesscolateContent.style.display = 'none';
+                linkChesscolateReadMore.style.display = 'inline';
+            });
+
+            // ------------------------------------
+
+            linkChessGlassesReadMore.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChessGlassesContent.style.display = 'block';
+                linkChessGlassesReadMore.style.display = 'none';
+            });
+            
+            linkChessGlassesReadLess.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChessGlassesContent.style.display = 'none';
+                linkChessGlassesReadMore.style.display = 'inline';
+            });
+
+            // ------------------------------------
+            
+            linkNerdGlassesReadMore.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenNerdGlassesContent.style.display = 'block';
+                linkNerdGlassesReadMore.style.display = 'none';
+            });
+            
+            linkNerdGlassesReadLess.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenNerdGlassesContent.style.display = 'none';
+                linkNerdGlassesReadMore.style.display = 'inline';
+            });
+
+
+        });
+    </script>
+    <script src="../javascript/manageCartItems.js"/>
 </body>
 </html>
 

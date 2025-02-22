@@ -1,8 +1,8 @@
 
 
-header, .breadcrumb{
+.breadcrumb{
     background-color: #003D2C;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .breadcrumb-item, .breadcrumb-item a{
@@ -15,7 +15,35 @@ header, .breadcrumb{
 
 nav {
     background-color: #005A41;
+    color: #FFFFFF !important;
 }
+
+
+.navbar-nav .nav-link{
+    color: #FFFFFF !important;
+}
+
+.navbar-nav .nav-link:hover{
+    color: rgb(0, 195, 255) !important;
+}
+
+/*
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.breadcrumb{
+    position: fixed;
+    top: 147px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+*/
 
 footer{
     background-color: #573A00;
@@ -26,3 +54,25 @@ article{
     background-color: #FFFFFF;
 }
 
+.wider-offcanvas{
+    width: 600px !important;
+}
+
+.buy-button{
+    background-color: #005A41;
+}
+
+.buy-button:hover{
+    background-color: #003D2C;
+}
+
+.price{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    align-self: center;
+}
+
+.price-cell{
+    vertical-align: middle;
+}
