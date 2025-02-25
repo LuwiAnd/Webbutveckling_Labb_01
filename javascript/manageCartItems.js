@@ -1,6 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    const confirmBuyButton = document.getElementById('buttonConfirmPurchase');
+    confirmBuyButton.addEventListener('click', function(){
+        alert("This is not a real shop. Please do not try to shop here.");
+    })
     
 
     const chesscolateQuantity = document.getElementById('chesscolateNumber');
@@ -8,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chesscolateIncreaseButton = document.getElementById('buttonIncreaseChesscolate');
     const chesscolateRemoveButton = document.getElementById('buttonRemoveChesscolate');
     const chesscolateCartItem = document.getElementById('cartItemChesscolate');
+
 
     chesscolateDecreaseButton.addEventListener('click', function() {
         let currentValue = parseInt(chesscolateQuantity.textContent);
