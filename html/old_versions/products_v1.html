@@ -65,256 +65,31 @@
     
 
 
-    <section id="sectionAllProducts"></section>
-
-    <script>
-        const products = [
-            {
-                name: "Chesscolate",
-                price: 9.00,
-                image: "../images/chesscolate.jpg",
-                alt: "Box of Chesscolate - chocolates with chess theme.",
-                experience: `
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.
-                    </p>
-                    <ul>
-                        <li>Look even Smarter</li>
-                        <li>Get Less Friends</li>
-                        <li>Intimidate opponents</li>
-                        <li>No Carbon Footprint</li>
-                    </ul>`,
-                description: "Chesscolate is our premium chess-themed chocolate assortment...",
-                features: ["Smarter", "More Friends", "Delicious", "No Carbon Footprint"],
-                buttonId: "buttonAddChesscolateToCart",
-                table: {
-                    measurements: {
-                        weight: "200 g",
-                        height: "5 cm",
-                        width: "15 cm",
-                        length: "15 cm"
-                    },
-                    performance: {
-                        harddrive: "64 TB",
-                        ram: "16 billion chess combinations",
-                        processor: "5000 GHz"
-                    }
-                }
-
-            },
-            {
-                name: "Chessglasses",
-                price: 2.00,
-                image: "../images/chessglasses.jpg",
-                alt: "Chess glasses - sunglasses with chess theme.",
-                experience: `
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.
-                    </p>
-                    <ul>
-                        <li>Look even Smarter</li>
-                        <li>Get Less Friends</li>
-                        <li>Intimidate opponents</li>
-                        <li>No Carbon Footprint</li>
-                    </ul>`,
-                description: "Chess glasses make you look smart but feel dumb...",
-                features: ["Don't think while playing chess", "More Enemies", "Look smart while being dumb", "64 core processor"],
-                buttonId: "buttonAddChessGlassesToCart",
-                table: {
-                    measurements: {
-                        weight: "200 g",
-                        height: "5 cm",
-                        width: "15 cm",
-                        length: "15 cm"
-                    },
-                    performance: {
-                        harddrive: "64 TB",
-                        ram: "16 billion chess combinations",
-                        processor: "5000 GHz"
-                    }
-                }
-            },
-            {
-                name: "Nerdy Sunglasses",
-                price: 5.00,
-                image: "../images/chessglasses2.jpg",
-                alt: "Sunglasses for nerds - includes nerdy case.",
-                experience: `
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.
-                    </p>
-                    <ul>
-                        <li>Look even Smarter</li>
-                        <li>Get Less Friends</li>
-                        <li>Intimidate opponents</li>
-                        <li>No Carbon Footprint</li>
-                    </ul>`,
-                description: "Look even smarter with nerdy sunglasses...",
-                features: ["Look even Smarter", "Get Less Friends", "Intimidate opponents", "No Carbon Footprint"],
-                buttonId: "buttonAddNerdGlassesToCart",
-                table: {
-                    measurements: {
-                        weight: "200 g",
-                        height: "5 cm",
-                        width: "15 cm",
-                        length: "15 cm"
-                    },
-                    performance: {
-                        harddrive: "64 TB",
-                        ram: "16 billion chess combinations",
-                        processor: "5000 GHz"
-                    }
-                }
-            }
-        ];
-
-        function generateProducts(){
-            const section = document.getElementById('sectionAllProducts');
-
-            products.forEach(product => {
-                /*
-                const productHTML_fel = `
-                    <section class="bg-light text-dark p-5 text-center text-sm-start">
-                        <div class="container">
-                            <div class="d-sm-flex align-items-start justify-content-between">
-                                <div class="col-sm-6 col-md-3">
-                                    <img src="${product.image}" class="img-fluid" alt="${product.alt}" style="width: 100%; max-width: 300px; margin-bottom: 15px;"/>
-                                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-center mt-3">
-                                        <div class="price-container">
-                                            <p class="price">$${product.price.toFixed(2)}</p>
-                                        </div>
-                                        <div class="button-container">
-                                            <button id="${product.buttonId}" class="btn btn-primary btn-lg buy-button">
-                                                Add to Cart
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-9" style="padding-left: 5%;">
-                                    <h1>${product.name}</h1>
-                                    <h2>User experience</h2>
-                                    <p>${product.description}</p>
-                                    <ul>
-                                        ${product.features.map(feature => `<li>${feature}</li>`).join('')}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <hr>
-                `;
-                */
-
-                let productHTML = `
-                    <section class="bg-light text-dark p-5 text-center text-sm-start">
-                        <div class="container">
-                            <div class="d-sm-flex align-items-start justify-content-between">
-                                <div class="col-sm-6 col-md-3">
-                                    <img src="${product.image}" class="img-fluid" alt="${product.alt}" style="width: 100%; max-width: 300px; margin-bottom: 15px;"/>
-
-                                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-center mt-3">
-                                        <div class="price-container">
-                                            <p class="price">$${product.price.toFixed(2)}</p>
-                                        </div>
-                                        <div class="button-container">
-                                            <button id="${product.buttonId}" class="btn btn-primary btn-lg  buy-button" alt="Click this button to add Chesscolate to cart">
-                                                Add to Cart
-                                            </button>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-sm-6 col-md-9" style="padding-left: 5%;">
-                                    <h1>${product.name}</h1>
-                                    <h2>User experience</h2>
-                                    <p>${product.experience}</p>
-                                    
-                                    <p><a href="#" id="link${product.name}ReadMore" class="text-primary">Read more...</a></p>
-                                    
-
-                                    <!-- Hidden content that will be shown when "Read more" is clicked -->
-                                    <div id="hidden${product.name}Content" style="display: none;">
-                                        <h3>Product description</h3>
-                                        <p>${product.description}</p>
-                                        
-                                        <h3>Technical details</h3>
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">Measurements</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Height</td>
-                                                    <td>${product.table.height}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Width</td>
-                                                    <td>25 cm</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Length</td>
-                                                    <td>25 cm</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Weight</td>
-                                                    <td>450 g</td>
-                                                </tr>
-                                            </tbody>
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">Performance</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Hard drive</td>
-                                                    <td>Cocoa solids 70%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>RAM</td>
-                                                    <td>16 unique flavor combinations</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Processor speed</td>
-                                                    <td>Melts at 37°C body temperature</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        
-                                        <p><a href="#" id="link${product.name}ReadLess" class="text-primary">Read less</a></p>
-                                    </div>
-                                    <!-- End of hidden ${product.name} content -->
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <hr>
-                `;
-
-                console.log(productHTML);
-
-                section.innerHTML = product.productHTML;
-            });
-
-            
-            initializeReadMoreButtons();
-        }
-        
-        window.onload = generateProducts;
-
-    </script>
 
 
 
-    <!-- <!!-- Showcase Chesscolate --  >
+
+    <!-- Showcase Chesscolate -->
     <section class="bg-light text-dark p-5 text-center text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-start justify-content-between">
                 <div class="col-sm-6 col-md-3">
                     <img src="../images/chesscolate.jpg" class="img-fluid" alt="Box of Chesscolate - chocolates with chess theme." style="width: 100%; max-width: 300px; margin-bottom: 15px;"/>
+
+                    
+                    <!-- <table>
+                        <tr>
+                            <!!-- <td class="price-cell" style="vertical-align: middle; height: 100%; display: flex; align-items: center;"> 
+                            <td class="price-cell" style="padding-top: 10px;">
+                                <p class="price">
+                                    $9.00
+                                </p>
+                            </td>
+                            <td style="padding-left: 60px;">
+                                <button id="buttonAddChesscolateToCart" class="btn btn-primary btn-lg  buy-button" alt="Click this button to add Chesscolate to cart">Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table> -->
 
                     <div class="d-flex flex-column flex-sm-row gap-3 align-items-center mt-3">
                         <div class="price-container">
@@ -341,7 +116,7 @@
                     <p><a href="#" id="linkChesscolateReadMore" class="text-primary">Read more...</a></p>
                     
 
-                    <!!-- Hidden content that will be shown when "Read more" is clicked --  >
+                    <!-- Hidden content that will be shown when "Read more" is clicked -->
                     <div id="hiddenChesscolateContent" style="display: none;">
                         <h3>Product description</h3>
                         <p>Chessolate is our premium chess-themed chocolate assortment, crafted for chess enthusiasts with a sweet tooth. Each handmade chocolate piece is shaped like different chess pieces - knights, pawns, bishops, rooks, queens, and kings - and filled with unique flavors including dark chocolate ganache, white chocolate with raspberry, milk chocolate praline, and coffee-infused caramel.</p>
@@ -395,7 +170,7 @@
                         
                         <p><a href="#" id="linkChesscolateReadLess" class="text-primary">Read less</a></p>
                     </div>
-                    <!!-- End of hidden Chesscolate content --  >
+                    <!-- End of hidden Chesscolate content -->
 
                 </div>
             </div>
@@ -404,25 +179,28 @@
     <hr>
 
 
-    <!!-- Showcase chessglases --  >
+    <!-- Showcase chessglases -->
     <section class="bg-light text-dark p-5 text-center text-sm-start">
         <div class="container">
+            <!-- <div class="d-sm-flex align-items-center justify-content-between"> -->
             <div class="d-sm-flex align-items-start justify-content-between">
-                <div class="col-sm-6 col-md-3">
-                    <img src="../images/chessglasses.jpg" class="img-fluid" alt="Chess glases - sunglasses with chess theme." style="width: 100%; max-width: 300px; margin-bottom: 15px;"/>
-                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-center mt-3">
-                        <div class="price-container">
-                            <p class="price">$2.00</p>
-                        </div>
-                        <div class="button-container">
-                            <button id="buttonAddChessGlassesToCart" class="btn btn-primary btn-lg buy-button" alt="Click this button to add Chess glasses to cart">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                    
+                <div class="col-md-3">
+                    <img src="../images/chessglasses.jpg" alt="Chess glases - sunglasses with chess theme." style="height: 300px; margin-bottom: 15px;"/>
+                    <table>
+                        <tr>
+                            <!-- <td class="price-cell" style="vertical-align: middle; height: 100%; display: flex; align-items: center;"> -->
+                            <td class="price-cell" style="padding-top: 10px;">
+                                <p class="price">
+                                    $2.00
+                                </p>
+                            </td>
+                            <td style="padding-left: 60px;">
+                                <button id="buttonAddChessGlassesToCart" class="btn btn-primary btn-lg buy-button" alt="Click this button to add Chess glasses to cart">Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="col-sm-6 col-md-9" style="padding-left: 5%;">
+                <div class="col-md-9">
                     <h1>Chessglases</h1>
                     <h2>User experience</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.</p>
@@ -435,7 +213,7 @@
                     <p><a href="#" id="linkChessGlassesReadMore" class="text-primary">Read more...</a></p>
                     
 
-                    <!!-- Hidden content that will be shown when "Read more" is clicked --  >
+                    <!-- Hidden content that will be shown when "Read more" is clicked -->
                     <div id="hiddenChessGlassesContent" style="display: none;">
                         <h3>Product description</h3>
                         <p>Chessolate is our premium chess-themed chocolate assortment, crafted for chess enthusiasts with a sweet tooth. Each handmade chocolate piece is shaped like different chess pieces - knights, pawns, bishops, rooks, queens, and kings - and filled with unique flavors including dark chocolate ganache, white chocolate with raspberry, milk chocolate praline, and coffee-infused caramel.</p>
@@ -489,7 +267,7 @@
                         
                         <p><a href="#" id="linkChessGlassesReadLess" class="text-primary">Read less</a></p>
                     </div>
-                    <!!-- End of hidden Chesscolate content --  >
+                    <!-- End of hidden Chesscolate content -->
 
                 </div>
             </div>
@@ -499,26 +277,28 @@
 
 
 
-    <!!-- Showcase --  >
+    <!-- Showcase -->
     <section class="bg-light text-dark p-5 text-center text-sm-start">
         <div class="container">
+            <!-- <div class="d-sm-flex align-items-center justify-content-between"> -->
             <div class="d-sm-flex align-items-start justify-content-between">
-                <div class="col-sm-6 col-md-3">
-                    <img src="../images/chessglasses2.jpg" class="img-fluid" alt="Sunglasses for nerds - includes nerdy case." style="width: 100%; max-width: 300px; margin-bottom: 15px;"/>
-                    
-                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-center mt-3">
-                        <div class="price-container">
-                            <p class="price">$5.00</p>
-                        </div>
-                        <div class="button-container">
-                            <button  id="buttonAddNerdGlassesToCart" class="btn btn-primary btn-lg buy-button" alt="Click this button to add Nerdy Sunglasses to cart">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                    
+                <div class="col-md-3">
+                    <img src="../images/chessglasses2.jpg" alt="sunglasses for nerds - includes nerdy case." style="height: 300px; margin-bottom: 15px;"/>
+                    <table>
+                        <tr>
+                            <!-- <td class="price-cell" style="vertical-align: middle; height: 100%; display: flex; align-items: center;"> -->
+                            <td class="price-cell" style="padding-top: 10px;">
+                                <p class="price">
+                                    $5.00
+                                </p>
+                            </td>
+                            <td style="padding-left: 60px;">
+                                <button  id="buttonAddNerdGlassesToCart" class="btn btn-primary btn-lg buy-button" alt="Click this button to add Nerdy Sunglasses to cart">Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="col-sm-6 col-md-9" style="padding-left: 5%;">
+                <div class="col-md-9">
                     <h1>Nerdy sunglasses</h1>
                     <h2>User experience</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsa accusamus ut aut, illo minima eius labore repellendus consequatur nostrum doloremque aliquam perspiciatis modi rerum minus praesentium odio voluptatem debitis.</p>
@@ -531,7 +311,7 @@
                     <p><a href="#" id="linkNerdGlassesReadMore" class="text-primary">Read more...</a></p>
                     
 
-                    <!!-- Hidden content that will be shown when "Read more" is clicked --  >
+                    <!-- Hidden content that will be shown when "Read more" is clicked -->
                     <div id="hiddenNerdGlassesContent" style="display: none;">
                         <h3>Product description</h3>
                         <p>Chessolate is our premium chess-themed chocolate assortment, crafted for chess enthusiasts with a sweet tooth. Each handmade chocolate piece is shaped like different chess pieces - knights, pawns, bishops, rooks, queens, and kings - and filled with unique flavors including dark chocolate ganache, white chocolate with raspberry, milk chocolate praline, and coffee-infused caramel.</p>
@@ -585,13 +365,13 @@
                         
                         <p><a href="#" id="linkNerdGlassesReadLess" class="text-primary">Read less</a></p>
                     </div>
-                    <!!-- End of hidden Chesscolate content --  >
+                    <!-- End of hidden Chesscolate content -->
 
                 </div>
             </div>
         </div>
     </section>
-    <hr> -->
+    <hr>
 
 
 
@@ -707,83 +487,63 @@
 
     <script>
         // This script controls the "Read more" and "Read less" links that allows the user to show more or less information about each product.
-        function initializeReadMoreButtons(){
-            document.addEventListener('DOMContentLoaded', function() {
-                const linkChesscolateReadMore = document.getElementById('linkChesscolateReadMore');
-                const linkChesscolateReadLess = document.getElementById('linkChesscolateReadLess');
-                const hiddenChesscolateContent = document.getElementById('hiddenChesscolateContent');
+        document.addEventListener('DOMContentLoaded', function() {
+            const linkChesscolateReadMore = document.getElementById('linkChesscolateReadMore');
+            const linkChesscolateReadLess = document.getElementById('linkChesscolateReadLess');
+            const hiddenChesscolateContent = document.getElementById('hiddenChesscolateContent');
 
-                const linkChessGlassesReadMore = document.getElementById('linkChessGlassesReadMore');
-                const linkChessGlassesReadLess = document.getElementById('linkChessGlassesReadLess');
-                const hiddenChessGlassesContent = document.getElementById('hiddenChessGlassesContent');
-                
-                const linkNerdGlassesReadMore = document.getElementById('linkNerdGlassesReadMore');
-                const linkNerdGlassesReadLess = document.getElementById('linkNerdGlassesReadLess');
-                const hiddenNerdGlassesContent = document.getElementById('hiddenNerdGlassesContent');
-                
-                linkChesscolateReadMore.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    hiddenChesscolateContent.style.display = 'block';
-                    linkChesscolateReadMore.style.display = 'none';
-                });
-                
-                linkChesscolateReadLess.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    hiddenChesscolateContent.style.display = 'none';
-                    linkChesscolateReadMore.style.display = 'inline';
-                });
-
-                // ------------------------------------
-
-                linkChessGlassesReadMore.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    hiddenChessGlassesContent.style.display = 'block';
-                    linkChessGlassesReadMore.style.display = 'none';
-                });
-                
-                linkChessGlassesReadLess.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    hiddenChessGlassesContent.style.display = 'none';
-                    linkChessGlassesReadMore.style.display = 'inline';
-                });
-
-                // ------------------------------------
-                
-                linkNerdGlassesReadMore.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    hiddenNerdGlassesContent.style.display = 'block';
-                    linkNerdGlassesReadMore.style.display = 'none';
-                });
-                
-                linkNerdGlassesReadLess.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    hiddenNerdGlassesContent.style.display = 'none';
-                    linkNerdGlassesReadMore.style.display = 'inline';
-                });
-
-                // ----
-
-                // Skapar en ny script-tagg
-                document.addEventListener("DOMContentLoaded", function () {
-                    const script = document.createElement("script");
-                    script.src = "../javascript/manageCartItems.js";
-                    script.defer = true; // Se till att det laddas efter HTML
-                    document.body.appendChild(script);
-
-                    // När skriptet har laddats
-                    script.onload = function () {
-                        console.log("manageCartItems.js har laddats!");
-                    };
-
-                    script.onerror = function () {
-                        console.error("Fel: kunde inte ladda manageCartItems.js");
-                    };
-                });
-
+            const linkChessGlassesReadMore = document.getElementById('linkChessGlassesReadMore');
+            const linkChessGlassesReadLess = document.getElementById('linkChessGlassesReadLess');
+            const hiddenChessGlassesContent = document.getElementById('hiddenChessGlassesContent');
+            
+            const linkNerdGlassesReadMore = document.getElementById('linkNerdGlassesReadMore');
+            const linkNerdGlassesReadLess = document.getElementById('linkNerdGlassesReadLess');
+            const hiddenNerdGlassesContent = document.getElementById('hiddenNerdGlassesContent');
+            
+            linkChesscolateReadMore.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChesscolateContent.style.display = 'block';
+                linkChesscolateReadMore.style.display = 'none';
             });
-        }
+            
+            linkChesscolateReadLess.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChesscolateContent.style.display = 'none';
+                linkChesscolateReadMore.style.display = 'inline';
+            });
+
+            // ------------------------------------
+
+            linkChessGlassesReadMore.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChessGlassesContent.style.display = 'block';
+                linkChessGlassesReadMore.style.display = 'none';
+            });
+            
+            linkChessGlassesReadLess.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenChessGlassesContent.style.display = 'none';
+                linkChessGlassesReadMore.style.display = 'inline';
+            });
+
+            // ------------------------------------
+            
+            linkNerdGlassesReadMore.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenNerdGlassesContent.style.display = 'block';
+                linkNerdGlassesReadMore.style.display = 'none';
+            });
+            
+            linkNerdGlassesReadLess.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenNerdGlassesContent.style.display = 'none';
+                linkNerdGlassesReadMore.style.display = 'inline';
+            });
+
+
+        });
     </script>
-    <!-- <script src="../javascript/manageCartItems.js"/> -->
+    <script src="../javascript/manageCartItems.js"/>
 </body>
 </html>
 

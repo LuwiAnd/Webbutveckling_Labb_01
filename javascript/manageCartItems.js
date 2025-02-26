@@ -97,8 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
     */
 
     addChesscolateToCartButton.addEventListener('click', function() {
+        console.log("click")
         const currentQuantity = parseInt(chesscolateQuantity.textContent);
         if(currentQuantity === 0 || chesscolateCartItem.style.display === 'none') {
+            console.log("yes");
             chesscolateQuantity.textContent = '1';
             chesscolateCartItem.style.display = 'block';
         }
