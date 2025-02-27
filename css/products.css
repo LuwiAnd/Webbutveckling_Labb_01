@@ -65,16 +65,6 @@ article{
     width: 600px !important;
 }
 
-/*
-.buy-button{
-    background-color: #005A41;
-    margin-bottom: 10px;
-}
-
-.buy-button:hover{
-    background-color: #003D2C;
-}
-*/
 
 .buy-button{
     background-color: #005A41;
@@ -96,4 +86,12 @@ article{
 
 .price-cell{
     vertical-align: middle;
+}
+
+a{
+    color: darkblue;
+}
+
+a:hover{
+    color: #003D2C;
 }
