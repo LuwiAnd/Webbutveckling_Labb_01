@@ -62,3 +62,11 @@ article{
     background-color: #003D2C;
     border-color: #003D2C;
 }
+
+a{
+    color: darkblue;
+}
+
+a:hover{
+    color: #003D2C;
+}
