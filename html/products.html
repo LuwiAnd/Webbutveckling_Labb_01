@@ -68,7 +68,7 @@
 
     <section id="sectionAllProducts"></section>
 
-    <script>
+    <!-- <script>
         const products = [
             {
                 name: "Chesscolate",
@@ -206,7 +206,7 @@
                                     <p><a href="#" id="link${product.name}ReadMore" class="text-primary">Read more...</a></p>
                                     
 
-                                    <!-- Hidden content that will be shown when "Read more" is clicked -->
+                                    <!!-- Hidden content that will be shown when "Read more" is clicked --  >
                                     <div id="hidden${product.name}Content" style="display: none;">
                                         <h3>Product description</h3>
                                         <p>${product.description}</p>
@@ -259,7 +259,7 @@
                                         
                                         <p><a href="#" id="link${product.name}ReadLess" class="text-primary">Read less</a></p>
                                     </div>
-                                    <!-- End of hidden ${product.name} content -->
+                                    <!!-- End of hidden ${product.name} content --  >
 
                                 </div>
                             </div>
@@ -458,9 +458,9 @@
             initializeAddToCartButtons();
         }
 
-    </script>
-
-
+    </script> -->
+    <!-- Ovanstående script-tag har flyttats till ../javascript/manageCartItemsDataDrivenVersion.js -->
+    <script src="../javascript/manageCartItemsDataDrivenVersion.js"></script>
 
     
 
@@ -587,7 +587,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script>
+    <!-- <script>
         // Script för "Read more" och "Read less" länkar som låter användaren visa mer respektive mindre information om varje produkt.
         function initializeReadMoreButtons(){
 
@@ -669,8 +669,18 @@
 
             // });
         }
-    </script>
-    <script src="../javascript/manageCartItems.js"></script>
+    </script> -->
+
+    <!-- Ovanstående script-tag har flyttats till nedanstående program och gjorts om till att använda products-array:en -->
+    <script src="../javascript/manageReadMoreLinks.js"></script>
+
+
+
+
+
+
+    <!-- ../javascript/manageCartItems.js har slutat att användas efter att manageCartItemsDataDrivenVersion.js tagit över dess funktioner. -->
+    <!-- <script src="../javascript/manageCartItems.js"></script> -->
 </body>
 </html>
 
