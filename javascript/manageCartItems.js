@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Add items to cart
+    // Läser in Add-to-cart-knappar
     const  addChesscolateToCartButton = document.getElementById( 'buttonAddChesscolateToCart');
     const addChessGlassesToCartButton = document.getElementById('buttonAddChessGlassesToCart');
     const  addNerdGlassesToCartButton = document.getElementById( 'buttonAddNerdGlassesToCart');
@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     */
 
+    // Add Chesscolate knapp
     addChesscolateToCartButton.addEventListener('click', function() {
         console.log("click")
         const currentQuantity = parseInt(chesscolateQuantity.textContent);
@@ -106,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Add ChessGlasses knapp
     addChessGlassesToCartButton.addEventListener('click', function() {
         const currentQuantity = parseInt(chessGlassesQuantity.textContent);
         if(currentQuantity === 0 || chessGlassesCartItem.style.display === 'none') {
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Add NerdGlasses knapp
     addNerdGlassesToCartButton.addEventListener('click', function() {
         const currentQuantity = parseInt(nerdGlassesQuantity.textContent);
         if(currentQuantity === 0 || nerdGlassesCartItem.style.display === 'none') {

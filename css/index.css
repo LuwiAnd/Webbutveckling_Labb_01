@@ -32,7 +32,7 @@ https://paletton.com/#uid=623170kHwcnEraTGfbJGXeOGqhd
 
 
 
-
+/* Detta har flyttat till nav.css.
 header, .breadcrumb{
     background-color: #003D2C;
     color: #FFFFFF;
@@ -43,7 +43,7 @@ header, .breadcrumb{
 }
 
 .breadcrumb-item::before {
-    color: white !important; /* Gör "/" vit */
+    color: white !important; /* Gör "/" vit --/
 }
 
 
@@ -59,6 +59,7 @@ nav {
 .navbar-nav .nav-link:hover{
     color: rgb(0, 195, 255) !important;
 }
+*/
 
 
 
@@ -88,3 +89,14 @@ body {
 }
 
 */
+
+.buy-button{
+    background-color: #005A41;
+    border-color: #005A41;
+    margin-bottom: 10px;
+}
+
+.buy-button:hover{
+    background-color: #003D2C;
+    border-color: #003D2C;
+}

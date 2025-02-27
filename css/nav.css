@@ -1,0 +1,27 @@
+/* Denna css-fil stajlar navigationen på sidan. */
+
+header, .breadcrumb {
+    background-color: #003D2C;
+    color: #FFFFFF;
+}
+
+.breadcrumb-item, .breadcrumb-item a {
+    color: #FFFFFF;
+}
+
+.breadcrumb-item::before {
+    color: white !important; /* Gör "/" vit */
+}
+
+nav {
+    background-color: #005A41;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 195, 255) !important;
+}
