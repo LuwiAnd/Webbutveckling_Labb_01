@@ -63,10 +63,15 @@ article{
     border-color: #003D2C;
 }
 
-a{
+
+
+
+ul li a{
     color: darkblue;
+    font-weight: bold;
 }
 
-a:hover{
+ul li a:hover{
     color: #003D2C;
+    font-weight: bold;
 }

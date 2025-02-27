@@ -88,10 +88,12 @@ article{
     vertical-align: middle;
 }
 
-a{
+div p a{
     color: darkblue;
+    font-weight: bold;
 }
 
-a:hover{
+div p a:hover{
     color: #003D2C;
+    font-weight: bold;
 }

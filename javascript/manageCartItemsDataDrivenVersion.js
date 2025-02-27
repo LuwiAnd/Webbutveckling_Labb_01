@@ -162,7 +162,7 @@ function manageProductsAndCart(){
                                 <h2>User experience</h2>
                                 <p>${product.experience}</p>
                                 
-                                <p><a href="#" id="link${product.name}ReadMore" class="text-primary">Read more...</a></p>
+                                <p><a href="#" id="link${product.name}ReadMore">Read more...</a></p>
                                 
 
                                 <!-- Hidden content that will be shown when "Read more" is clicked -->
@@ -216,7 +216,7 @@ function manageProductsAndCart(){
                                         </tbody>
                                     </table>
                                     
-                                    <p><a href="#" id="link${product.name}ReadLess" class="text-primary">Read less</a></p>
+                                    <p><a href="#" id="link${product.name}ReadLess" >Read less</a></p>
                                 </div>
                                 <!-- End of hidden ${product.name} content -->
 
