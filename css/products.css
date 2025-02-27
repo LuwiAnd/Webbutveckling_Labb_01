@@ -65,6 +65,7 @@ article{
     width: 600px !important;
 }
 
+/*
 .buy-button{
     background-color: #005A41;
     margin-bottom: 10px;
@@ -72,6 +73,18 @@ article{
 
 .buy-button:hover{
     background-color: #003D2C;
+}
+*/
+
+.buy-button{
+    background-color: #005A41;
+    border-color: #005A41;
+    margin-bottom: 10px;
+}
+
+.buy-button:hover{
+    background-color: #003D2C;
+    border-color: #003D2C;
 }
 
 .price{
