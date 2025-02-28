@@ -97,3 +97,15 @@ div p a:hover{
     color: #003D2C;
     font-weight: bold;
 }
+
+
+
+.custom-width{
+    width: 75% !important;
+}
+
+@media(min-width: 768px){
+    .custom-width{
+        width: 50% !important;
+    }
+}
