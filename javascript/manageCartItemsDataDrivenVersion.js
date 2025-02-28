@@ -303,14 +303,14 @@ function manageProductsAndCart(){
         cart.forEach(item => {
             const cartItemHtml = `
                 <div class="container" id="cartItem${item.id}" style="display: block;">
-                    <div class="d-md-flex align-items-center">
-                        <div class="col-md-2">
+                    <div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-lg-between">
+                        <div class="col-lg-2 pe-5 gap-5">
                             <img src="${item.image}" height="100px">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-lg-7 px-sm-5 px-md-3 px-lg-2" style="padding-left: 5%">
                             ${item.name} - ${item.alt}
                         </div>
-                        <div class="col-md-3 align-items-center justify-content-end">
+                        <div class="col-lg-3 align-items-center justify-content-end">
                             <table style="border: solid 1px black; text-align: center;">
                                 <tr>
                                     <td style="width: 30px;"><button id="buttonDecrease${item.id}" type="button" class="bi-dash" aria-label="Remove one item" style="margin: 5px 0px 0px 0px;"></button></td>
