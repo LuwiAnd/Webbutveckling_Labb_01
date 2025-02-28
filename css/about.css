@@ -37,7 +37,7 @@ article{
     background-color: #FFFFFF;
 }
 
-#jokeBox{
+/* #jokeBox{
     background-color: #003D2C;
     border: 5px solid #005A41;
     color: #FFFFFF;
@@ -47,9 +47,26 @@ article{
     justify-content: center;
 
     width: 90%;
-    /*height: auto;*/
+    /* height: auto; --/
     min-height: 150px;
     padding: 20px;
+} 
+*/
+
+#jokeBox {
+    background-color: #003D2C;
+    border: 5px solid #005A41;
+    color: #FFFFFF;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 90%;
+    max-width: 500px;
+    min-height: 150px;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
 .buy-button{
